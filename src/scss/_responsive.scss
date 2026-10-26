@@ -38,28 +38,8 @@
     }
   }
 
-  .brands-slider__track {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
-    overflow: visible;
-  }
-
   .brands-slider__slide {
-    width: 100%;
     min-height: 90px;
-  }
-
-  .brands-slider__controls {
-    display: none;
-  }
-
-  .brand-section:not(.is-expanded) .brands-slider__slide:nth-child(n + 7) {
-    display: none;
-  }
-
-  .brand-section.is-expanded .brands-slider__slide {
-    display: flex;
   }
 
   .equipment__grid {
@@ -112,13 +92,8 @@
     gap: 28px;
   }
 
-  .brands-slider__track,
   .brand-section.is-expanded .brands-slider__track {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .brand-section:not(.is-expanded) .brands-slider__slide:nth-child(n + 7) {
-    display: none;
   }
 }
 

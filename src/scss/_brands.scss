@@ -39,21 +39,12 @@
 
   &__track {
     display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    padding: 2px 2px 8px;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    align-items: stretch;
   }
 
   &__slide {
     display: flex;
-    flex: 0 0 min(78%, 240px);
+    flex-shrink: 0;
     min-width: 0;
     min-height: 80px;
     align-items: center;
@@ -62,7 +53,6 @@
     border: 0;
     border-radius: 6px;
     background: #fff;
-    scroll-snap-align: start;
     text-decoration: none;
     transition: transform 160ms ease;
 
@@ -111,19 +101,23 @@
     gap: 8px;
   }
 
-  &__dot {
+  .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
+    margin: 0 !important;
     background: #d5d5d5;
-    cursor: pointer;
+    opacity: 1;
 
-    &.is-active {
+    &-active {
       background: #7e7e82;
     }
   }
+}
+
+.brands-slider .brands-slider__pagination {
+  position: static;
+  width: auto;
+  transform: none;
 }
 
 .brand-section.is-expanded .brands-slider {
@@ -132,12 +126,13 @@
   &__track {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    overflow: visible;
+    transform: none !important;
   }
 
   &__slide {
-    width: 100%;
+    width: 100% !important;
     min-height: 80px;
+    margin-right: 0 !important;
   }
 
   &__controls {
