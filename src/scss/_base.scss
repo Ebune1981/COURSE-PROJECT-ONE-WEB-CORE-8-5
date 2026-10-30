@@ -1,3 +1,5 @@
+@use '../styles/variables' as *;
+
 * {
   box-sizing: border-box;
 }
@@ -43,4 +45,9 @@ img {
   letter-spacing: -0.2px;
   line-height: 24px;
   text-transform: uppercase;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
 }

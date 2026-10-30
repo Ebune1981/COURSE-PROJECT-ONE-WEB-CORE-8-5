@@ -1,8 +1,14 @@
+@use '../styles/variables' as *;
+
 .services {
   &__top {
     display: flex;
     align-items: center;
     min-width: 0;
+
+    @media (min-width: $breakpoint-desktop) {
+      gap: 20px;
+    }
   }
 
   &__title {
@@ -11,10 +17,28 @@
     border-left: 4px solid #41f6d7;
     font-size: 25px;
     line-height: 1.2;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 28px;
+    }
+
+    @media (max-width: $breakpoint-tablet - 1px) {
+      font-size: 22px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-right: auto;
+    }
   }
 
   &__actions {
     display: none;
+
+    @media (min-width: $breakpoint-desktop) {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
   }
 
   &__action {
@@ -71,5 +95,13 @@
       border: 2px solid #b2f0e8;
       border-radius: 4px;
     }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: calc(100% + 64px);
+    margin-right: -32px;
+    margin-left: -32px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
 }

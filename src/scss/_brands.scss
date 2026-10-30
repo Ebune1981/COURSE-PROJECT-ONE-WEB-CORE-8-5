@@ -1,5 +1,21 @@
+@use '../styles/variables' as *;
+
 .brand-section {
   margin-top: 24px;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: 32px;
+
+    &.is-expanded .brands-slider__track {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    &.is-expanded .brands-slider__track {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
 
   &__toggle {
     display: inline-flex;
@@ -55,6 +71,10 @@
     background: #fff;
     text-decoration: none;
     transition: transform 160ms ease;
+
+    @media (min-width: $breakpoint-tablet) {
+      min-height: 90px;
+    }
 
     &:hover {
       transform: translateY(-2px);

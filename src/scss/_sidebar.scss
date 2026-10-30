@@ -1,9 +1,15 @@
+@use '../styles/variables' as *;
+
 .sidebar {
   display: none;
   flex: 0 0 320px;
   padding: 20px 24px;
   background: #fff;
   box-shadow: 16px 0 32px rgba(0, 0, 0, 0.03);
+
+  @media (min-width: $breakpoint-desktop) {
+    display: block;
+  }
 
   &__header {
     display: flex;

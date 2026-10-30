@@ -1,3 +1,5 @@
+@use '../styles/variables' as *;
+
 .layout-container {
   display: flex;
   min-height: 100vh;
@@ -8,4 +10,12 @@
   min-width: 0;
   padding: 16px;
   background: #f8f8f8;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 24px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 32px;
+  }
 }

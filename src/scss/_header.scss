@@ -1,3 +1,5 @@
+@use '../styles/variables' as *;
+
 .header {
   display: flex;
   align-items: center;
@@ -51,5 +53,19 @@
     &--visible-tablet {
       display: none;
     }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin: -24px -24px 32px;
+    padding: 8px 24px;
+
+    &__button--visible-tablet,
+    &__divider--visible-tablet {
+      display: inline-flex;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    display: none;
   }
 }
